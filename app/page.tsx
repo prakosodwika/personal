@@ -123,6 +123,14 @@ function MagneticSocialLink({
   )
 }
 
+function ComingSoon() {
+  return (
+    <span className="inline-flex items-center rounded-full bg-zinc-300 dark:bg-zinc-800 ms-3 px-4 py-1 text-zinc-300 ring-1 ring-zinc-500/10 ring-inset text-xs md:text-sm">
+      Comming Soon !!!
+    </span>
+  )
+}
+
 export default function Personal() {
   return (
     <motion.main
@@ -135,19 +143,24 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <div className="flex-1">
-          <p className="text-zinc-600 dark:text-zinc-400">
-            Focused on creating intuitive and performant web experiences.
-            Bridging the gap between design and development.
-          </p>
-        </div>
+        <h3 className="mb-2 md:mb-5 font-medium text-zinc-600 dark:text-zinc-500 text-lg md:text-xl">
+          # Get to Know Me
+        </h3>
+        <p className="dark:text-white md:text-lg">
+          Hi! I'm Wika, a full-stack web developer who usually works with Laravel, Tailwind, and sometimes Node.js. I enjoy learning new things and currently exploring Next.js and FastAPI. I recently took a course on cloud computing to expand my knowledge. I like writing clean and organized code with a modular structure, so it's easier to develop in the future. For me, coding is not just about work, but also a way to keep learning and growing in the world of technology.
+        </p>
       </motion.section>
 
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
+        <div className='flex items-center mb-2 md:mb-5'>
+          <h3 className="font-medium text-zinc-600 dark:text-zinc-500 text-lg md:text-xl">
+            # My Works
+          </h3>
+          <ComingSoon/>
+        </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
@@ -176,7 +189,9 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Work Experience</h3>
+        <h3 className="mb-2 md:mb-5 font-medium text-zinc-600 dark:text-zinc-500 text-lg md:text-xl">
+          # Career Journey
+        </h3>
         <div className="flex flex-col space-y-2">
           {WORK_EXPERIENCE.map((job) => (
             <a
@@ -193,15 +208,22 @@ export default function Personal() {
               <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
                 <div className="relative flex w-full flex-row justify-between">
                   <div>
-                    <h4 className="font-normal dark:text-zinc-100">
+                    <h4 className="font-normal dark:text-white md:text-lg">
                       {job.title}
                     </h4>
-                    <p className="text-zinc-500 dark:text-zinc-400">
+                    <p className="text-zinc-500 dark:text-zinc-400 text-sm md:text-base">
                       {job.company}
                     </p>
                   </div>
-                  <p className="text-zinc-600 dark:text-zinc-400">
-                    {job.start} - {job.end}
+                    <p className="text-zinc-600 dark:text-zinc-400">
+                      {/* Mobile: hanya 4 char terakhir */}
+                      <span className="md:hidden">
+                        {job.start?.slice(-4)} - {job.end ? job.end.slice(-4) : 'Present'}
+                      </span>
+                      {/* Desktop: tampilkan full */}
+                      <span className="hidden md:inline">
+                        {job.start} - {job.end ?? 'Present'}
+                      </span>
                   </p>
                 </div>
               </div>
@@ -214,7 +236,12 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-3 text-lg font-medium">Blog</h3>
+        <div className='flex items-center mb-2 md:mb-5'>
+          <h3 className="font-medium text-zinc-600 dark:text-zinc-500 text-lg md:text-xl">
+            # My Writings
+          </h3>
+          <ComingSoon/>
+        </div>
         <div className="flex flex-col space-y-0">
           <AnimatedBackground
             enableHover
@@ -250,10 +277,12 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Connect</h3>
-        <p className="mb-5 text-zinc-600 dark:text-zinc-400">
+        <h3 className="mb-2 md:mb-5 font-medium text-zinc-600 dark:text-zinc-500 text-lg md:text-xl">
+          # Let’s Connect
+        </h3>
+        <p className="mb-5 text-zinc-800 dark:text-zinc-200 md:text-lg">
           Feel free to contact me at{' '}
-          <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
+          <a className="underline text-zinc-800 dark:text-zinc-200 dark:hover:text-white hover:text-black" href={`mailto:${EMAIL}`}>
             {EMAIL}
           </a>
         </p>
