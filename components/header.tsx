@@ -19,7 +19,7 @@ export function Header() {
           Full Stack Developer
         </TextEffect>
       </div>
-      <img className="h-12 w-12 md:h-16 md:w-16 rounded-full" src="./profile.png" alt="Profile" />
+      <img className="h-12 w-12 md:h-16 md:w-16 rounded-full" src="/profile.png" alt="Profile" />
     </header>
   )
 }

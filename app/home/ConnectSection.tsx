@@ -42,10 +42,10 @@ function MagneticSocialLink({
 export default function ConnectSection() {
   return (
     <section>
-      <SectionTitle title="# Let’s Connect" />
-      <p className="mb-5 text-zinc-800 dark:text-zinc-200 md:text-lg">
+      <SectionTitle title="Let’s Connect" />
+      <p className="mb-5 text-zinc-600 dark:text-zinc-400 md:text-lg">
         Feel free to contact me at{' '}
-        <a className="underline text-zinc-800 dark:text-zinc-200 dark:hover:text-white hover:text-black" href={`mailto:${EMAIL}`}>
+        <a className="underline text-zinc-600 dark:text-zinc-400 dark:hover:text-white hover:text-black" href={`mailto:${EMAIL}`}>
           {EMAIL}
         </a>
       </p>

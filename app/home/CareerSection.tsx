@@ -1,20 +1,19 @@
 import SectionTitle from "@/components/sectionTitle";
 import { Spotlight } from "@/components/ui/spotlight";
 import { WORK_EXPERIENCE } from "../data";
+import Link from "next/link";
+import { workExperience } from "@/data/workData";
 
 export default function CareerSection() {
-  const isComingSoon = WORK_EXPERIENCE.length === 0;
-
+  const isComingSoon = workExperience.length === 0;
   return (
     <section>
-      <SectionTitle title="# Career Journey" comingSoon={isComingSoon} />
+      <SectionTitle title="Career Journey" comingSoon={isComingSoon} />
       <div className="flex flex-col space-y-2">
-        {WORK_EXPERIENCE.map((job) => (
-          <a
+        {workExperience.map((job) => (
+          <Link
             className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
-            href={job.link}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`/career/${job.id}`}
             key={job.id}
           >
             <Spotlight
@@ -28,22 +27,20 @@ export default function CareerSection() {
                     {job.title}
                   </h4>
                   <p className="text-zinc-500 dark:text-zinc-400 text-sm md:text-base">
-                    {job.company}
+                    {job.company} | {job.location}
                   </p>
                 </div>
                 <p className="text-zinc-600 dark:text-zinc-400">
-                  {/* Mobile: hanya 4 char terakhir */}
                   <span className="md:hidden">
-                    {job.start?.slice(-4)} - {job.end ? job.end.slice(-4) : 'Present'}
+                    {job.end ? job.start.slice(-4) : 'Present'}
                   </span>
-                  {/* Desktop: tampilkan full */}
                   <span className="hidden md:inline">
                     {job.start} - {job.end ?? 'Present'}
                   </span>
                 </p>
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </section>

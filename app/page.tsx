@@ -26,14 +26,6 @@ const TRANSITION_SECTION = {
   duration: 0.3,
 }
 
-function ComingSoon() {
-  return (
-    <span className="inline-flex items-center rounded-full bg-zinc-300 dark:bg-zinc-800 ms-3 px-4 py-1 text-zinc-300 ring-1 ring-zinc-500/10 ring-inset text-xs md:text-sm">
-      Comming Soon !!!
-    </span>
-  )
-}
-
 export default function Personal() {
   return (
     <motion.main

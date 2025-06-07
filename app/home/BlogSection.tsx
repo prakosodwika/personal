@@ -8,7 +8,7 @@ export default function BlogSection() {
 
   return (
     <section>
-      <SectionTitle title="# My Writings" comingSoon={isComingSoon} />
+      <SectionTitle title="My Writings" comingSoon={isComingSoon} />
       <div className="flex flex-col space-y-0">
         <AnimatedBackground
           enableHover
