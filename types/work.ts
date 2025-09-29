@@ -10,11 +10,17 @@ export type WorkExperience = {
   type: string
 }
 
+export type Project = {
+  name: string,
+  link: string|null
+}
+
 export type WorkExperienceDetails = {
   id: string
   work_experience: WorkExperience
   reflection: string
   responsibilities: Array<string>
   key_achievements: Array<string>|null
+  projects?: Array<Project>
   tach_stack: TechStack[]
 }

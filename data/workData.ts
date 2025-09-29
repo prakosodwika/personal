@@ -67,6 +67,14 @@ export const workExperienceDetails: WorkExperienceDetails[] = [{
         'Delivered projects with flexible database structures that adapt to changing needs.',
         'Improved code modularity, reducing development time and simplifying maintenance.',
     ],
+    projects: [
+        { name: 'Event Equipment Rental Point of Sale', link: 'https://balisewasewa.com'},
+        { name: 'Football Academy Management System', link: 'https://papuafootballacademy.com'},
+        { name: 'Sport Tournament Management System', link: 'https://https://unileague.id'},
+        { name: 'Voucher Point of Sale', link: 'https://mankokumi.com/'},
+        { name: 'Pharmacy Management System', link: null},
+        { name: 'Medical Record System', link: null},
+    ],
     tach_stack: getTechStackIn([1, 2, 3, 4, 5, 6]),
 },{
     id: '2',
@@ -78,6 +86,9 @@ export const workExperienceDetails: WorkExperienceDetails[] = [{
     ],
     key_achievements: [
         'Simplified 30% of previously complex code structure, resulting in a more efficient team workflow.'
+    ],
+    projects: [
+        { name: 'Office Management System', link: null }
     ],
     tach_stack: getTechStackIn([1, 3, 7]),
 },{
@@ -94,6 +105,9 @@ export const workExperienceDetails: WorkExperienceDetails[] = [{
         'Landing page design doubled the average visitor dwell time.',
         'The website was perceived as more professional and credible, contributing to increased lead generation.',
         'Successfully launched and maintained client websites with reliable uptime and fast loading times on Hostinger hosting.'
+    ],
+    projects: [
+        { name: 'Design and Development of a Landing Page for a Digital Brand', link: 'https://ptuh-landing.vercel.app/haramain' }
     ],
     tach_stack: getTechStackIn([8, 15]),
 },{
@@ -112,6 +126,10 @@ export const workExperienceDetails: WorkExperienceDetails[] = [{
         'Improved backend data structure, making it easier to maintain and expand.',
         'Contributed to deployment and basic production support on GCP.',
     ],
+    projects: [
+        { name:'Digital Wallet APIs', link: 'https://instagram.com/halobelanja.com_official' },
+        { name:'Booking System for Attraction Rides APIs', link: 'https://instagram.com/bigs_indonesia' },
+    ],
     tach_stack: getTechStackIn([9, 10, 14, 11, 12, 4]),
 },{
     id: '5',
@@ -128,6 +146,9 @@ export const workExperienceDetails: WorkExperienceDetails[] = [{
         'Enhanced system automation and scalability by integrating Cloud Functions.',
         'Improved API reliability and alignment with frontend requirements, speeding up the development process.',
     ],
+    projects: [
+        { name: 'Visa Application Platform APIs', link: 'https://instagram.com/doortoid', }
+    ],
     tach_stack: getTechStackIn([1, 9, 10, 13]),
 },{
     id: '6',
@@ -140,6 +161,10 @@ export const workExperienceDetails: WorkExperienceDetails[] = [{
     key_achievements: [
         'Reduced API response time by up to 50% after refactoring.',
         'Maintained 99.9% application uptime for 3 months post-deployment.'
+    ],
+    projects: [
+        { name: 'E-commerce APIs', link: 'https://instagram.com/fishku.id' },
+        { name: 'Merchant APIs' , link: null},
     ],
     tach_stack: getTechStackIn([1, 9, 10, 11, 4]),
 },]
