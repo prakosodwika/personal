@@ -1,7 +1,7 @@
 'use client'
 
 import { workExperience, workExperienceDetails } from '@/data/workData'
-import { ArrowLeftFromLine, ChevronLeft, XIcon } from 'lucide-react'
+import { ArrowLeftFromLine, ArrowUpRight, ChevronLeft, XIcon } from 'lucide-react'
 import { motion } from 'motion/react'
 import { useRouter } from 'next/navigation'
 import * as React from 'react'
@@ -98,10 +98,27 @@ export default function CareerDetail({ params }: { params: Promise<{ id: string 
       >
         {workDetail?.key_achievements?.length ? <h3 className='text-xl mb-3'>Key Achievements</h3> : ''}
           <ul className='list-disc list-inside'>
-            {workDetail?.key_achievements?.map((r, i) => (
-              <li key={`resp-${i}`} className='text-zinc-600 dark:text-zinc-400 mb-2'>{r}</li>
+            {workDetail?.key_achievements?.map((k, i) => (
+              <li key={`resp-${i}`} className='text-zinc-600 dark:text-zinc-400 mb-2'>{k}</li>
             ))}
           </ul>
+      </motion.section>
+
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        {workDetail?.projects?.length ? <h3 className='text-xl mb-3'>Project Delivered</h3> : ''}
+        <ul className='list-disc list-inside'>
+          {workDetail?.projects?.map((d, i) => (
+            <li key={`resp-${i}`} className='text-zinc-600 dark:text-zinc-400 mb-2'>
+              {d.link ? <a href={d.link} target='_blank' className="underline">
+                {d.name} 
+                <ArrowUpRight className="inline-block h-4 w-4" />
+              </a> : <span>{d.name}</span>}
+              </li>
+            ))}
+        </ul>
       </motion.section>
 
       <motion.section
@@ -121,28 +138,3 @@ export default function CareerDetail({ params }: { params: Promise<{ id: string 
     </motion.main>
   )
 }
-
-// 1. Header/Title
-//  Judul halaman, misal: My Career Journey atau Professional Experience.
-// 2. Career Timeline / List
-//  Daftar pengalaman kerja (bisa dalam bentuk timeline atau list).
-//  Setiap item berisi:
-//  Job Title (misal: Full-stack Developer)
-//  Company (misal: Tri Wangsa Digital | Bali)
-//  Periode (misal: Nov 2024 - Present)
-//  Type (Full-time, Part-time, Freelance, dsb)
-//  Deskripsi singkat tentang peran/tanggung jawab (jika ada)
-//  Link ke website perusahaan (jika ada)
-// 3. Detail Per Role (Opsional)
-//  Jika ingin lebih detail, setiap pekerjaan bisa diklik untuk melihat:
-//  Tugas utama
-//  Tools/teknologi yang digunakan
-//  Pencapaian/proyek penting
-//  Testimoni atau rekomendasi (jika ada)
-// 4. Skills & Tools
-//  Daftar skill utama yang didapat dari pengalaman kerja tersebut.
-//  Bisa berupa list atau badge.
-// 5. Download CV (Opsional)
-//  Tombol untuk download CV/resume PDF.
-// 6. Contact/Call to Action
-//  Ajakan untuk menghubungi jika ingin tahu lebih lanjut atau bekerja sama.
