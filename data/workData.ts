@@ -70,7 +70,7 @@ export const workExperienceDetails: WorkExperienceDetails[] = [{
     projects: [
         { name: 'Event Equipment Rental Point of Sale', link: 'https://balisewasewa.com'},
         { name: 'Football Academy Management System', link: 'https://papuafootballacademy.com'},
-        { name: 'Sport Tournament Management System', link: 'https://https://unileague.id'},
+        { name: 'Sport Tournament Management System', link: 'https://unileague.id'},
         { name: 'Voucher Point of Sale', link: 'https://mankokumi.com/'},
         { name: 'Pharmacy Management System', link: null},
         { name: 'Medical Record System', link: null},
