@@ -14,7 +14,7 @@ const eslintConfig = [
     "next/core-web-vitals",
     "next/typescript",
     "plugin:prettier/recommended",
-  "plugin:mdx/recommended"
+    "plugin:mdx/recommended"
   ),
   {
     rules: {
