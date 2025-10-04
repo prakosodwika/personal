@@ -1,14 +1,18 @@
-import SectionTitle from "@/components/sectionTitle";
-import { AnimatedBackground } from "@/components/ui/animated-background";
-import { BLOG_POSTS } from "../data";
-import Link from "next/link";
+import SectionTitle from '@/components/sectionTitle'
+import { useEffect, useState } from 'react'
+import { AnimatedBackground } from '@/components/ui/animated-background'
+import Link from 'next/link'
+import { getAllBlogs } from '@/services/blog'
 
 export default function BlogSection() {
-  const isComingSoon = BLOG_POSTS.length === 0;
+  const [articles, setArticles] = useState<any[]>([])
+  useEffect(() => {
+    getAllBlogs().then(setArticles)
+  }, [])
 
   return (
     <section>
-      <SectionTitle title="My Writings" comingSoon={isComingSoon} />
+      <SectionTitle title="My Writings" comingSoon={articles.length === 0} />
       <div className="flex flex-col space-y-0">
         <AnimatedBackground
           enableHover
@@ -19,19 +23,19 @@ export default function BlogSection() {
             duration: 0.2,
           }}
         >
-          {BLOG_POSTS.map((post) => (
+          {articles.map((article) => (
             <Link
-              key={post.uid}
+              key={article.id}
               className="-mx-3 rounded-xl px-3 py-3"
-              href={post.link}
-              data-id={post.uid}
+              href={'/blog/' + article.slug}
+              data-id={article.id}
             >
               <div className="flex flex-col space-y-1">
                 <h4 className="font-normal dark:text-zinc-100">
-                  {post.title}
+                  {article.title}
                 </h4>
                 <p className="text-zinc-500 dark:text-zinc-400">
-                  {post.description}
+                  {article.description}
                 </p>
               </div>
             </Link>

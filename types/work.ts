@@ -1,4 +1,4 @@
-import { TechStack } from "./tach"
+import { TechStack } from './tach'
 
 export type WorkExperience = {
   id: string
@@ -6,13 +6,13 @@ export type WorkExperience = {
   company: string
   location: string
   start: string
-  end: string|null
+  end: string | null
   type: string
 }
 
 export type Project = {
-  name: string,
-  link: string|null
+  name: string
+  link: string | null
 }
 
 export type WorkExperienceDetails = {
@@ -20,7 +20,7 @@ export type WorkExperienceDetails = {
   work_experience: WorkExperience
   reflection: string
   responsibilities: Array<string>
-  key_achievements: Array<string>|null
+  key_achievements: Array<string> | null
   projects?: Array<Project>
   tach_stack: TechStack[]
 }

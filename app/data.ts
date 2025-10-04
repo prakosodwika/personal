@@ -10,7 +10,7 @@ type WorkExperience = {
   company: string
   title: string
   start: string
-  end: string|null
+  end: string | null
   type: string
   link: string
   id: string
@@ -29,6 +29,8 @@ type WorkExperienceDetails = {
 }
 
 type BlogPost = {
+  id: number
+  slug: string
   title: string
   description: string
   link: string
@@ -120,9 +122,10 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
 
 export const WORK_EXPERIENCE_DETAILS: WorkExperienceDetails[] = [
   {
-    id: "1",
+    id: '1',
     workExperience: WORK_EXPERIENCE[0],
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptate.',
     tachStack: [
       {
         name: 'HTML',
@@ -137,30 +140,36 @@ export const WORK_EXPERIENCE_DETAILS: WorkExperienceDetails[] = [
         icon: 'https://ibelick.com',
       },
     ],
-  }
+  },
 ]
 
 export const BLOG_POSTS: BlogPost[] = [
-  // {
-  //   title: 'Exploring the Intersection of Design, AI, and Design Engineering',
-  //   description: 'How AI is changing the way we design',
-  //   link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-  //   uid: 'blog-1',
-  // },
-  // {
-  //   title: 'Why I left my job to start my own company',
-  //   description:
-  //     'A deep dive into my decision to leave my job and start my own company',
-  //   link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-  //   uid: 'blog-2',
-  // },
-  // {
-  //   title: 'What I learned from my first year of freelancing',
-  //   description:
-  //     'A look back at my first year of freelancing and what I learned',
-  //   link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-  //   uid: 'blog-3',
-  // },
+  {
+    id: 1,
+    slug: 'exploring-the-intersection-of-design-ai-and-design-engineering',
+    title: 'Exploring the Intersection of Design, AI, and Design Engineering',
+    description: 'How AI is changing the way we design',
+    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+    uid: 'blog-1',
+  },
+  {
+    id: 2,
+    slug: 'why-i-left-my-job-to-start-my-own-company',
+    title: 'Why I left my job to start my own company',
+    description:
+      'A deep dive into my decision to leave my job and start my own company',
+    link: '/blog/why-i-left-my-job-to-start-my-own-company',
+    uid: 'blog-2',
+  },
+  {
+    id: 3,
+    slug: 'what-i-learned-from-my-first-year-of-freelancing',
+    title: 'What I learned from my first year of freelancing',
+    description:
+      'A look back at my first year of freelancing and what I learned',
+    link: '/blog/what-i-learned-from-my-first-year-of-freelancing',
+    uid: 'blog-3',
+  },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [

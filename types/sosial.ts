@@ -1,4 +1,4 @@
 export type SosialLink = {
-  label: string,
+  label: string
   link: string
 }

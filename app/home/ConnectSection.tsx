@@ -1,8 +1,5 @@
 import { Magnetic } from '@/components/ui/magnetic'
-import {
-  EMAIL,
-  SOCIAL_LINKS,
-} from '../data'
+import { EMAIL, SOCIAL_LINKS } from '../data'
 import SectionTitle from '@/components/sectionTitle'
 
 function MagneticSocialLink({
@@ -15,8 +12,8 @@ function MagneticSocialLink({
   return (
     <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
       <a
-        href={link} 
-        target='_blank'
+        href={link}
+        target="_blank"
         className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-zinc-100 px-2.5 py-1 text-sm text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
       >
         {children}
@@ -44,9 +41,12 @@ export default function ConnectSection() {
   return (
     <section>
       <SectionTitle title="Let’s Connect" />
-      <p className="mb-5 text-zinc-600 dark:text-zinc-400 md:text-lg">
+      <p className="mb-5 text-zinc-600 md:text-lg dark:text-zinc-400">
         Feel free to contact me at{' '}
-        <a className="underline text-zinc-600 dark:text-zinc-400 dark:hover:text-white hover:text-black" href={`mailto:${EMAIL}`}>
+        <a
+          className="text-zinc-600 underline hover:text-black dark:text-zinc-400 dark:hover:text-white"
+          href={`mailto:${EMAIL}`}
+        >
           {EMAIL}
         </a>
       </p>
