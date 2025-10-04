@@ -45,7 +45,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <ProjectSection/>
+        <ProjectSection />
       </motion.section>
 
       <motion.section

@@ -1,6 +1,6 @@
 'use client'
 
-import { PROJECTS } from "../data"
+import { PROJECTS } from '../data'
 import { XIcon } from 'lucide-react'
 import {
   MorphingDialog,
@@ -9,7 +9,7 @@ import {
   MorphingDialogClose,
   MorphingDialogContainer,
 } from '@/components/ui/morphing-dialog'
-import SectionTitle from "@/components/sectionTitle"
+import SectionTitle from '@/components/sectionTitle'
 
 type ProjectVideoProps = {
   src: string

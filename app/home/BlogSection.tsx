@@ -1,8 +1,8 @@
-import SectionTitle from "@/components/sectionTitle";
-import { useEffect, useState } from "react"
-import { AnimatedBackground } from "@/components/ui/animated-background";
-import Link from "next/link";
-import { getAllBlogs } from "@/services/blog";
+import SectionTitle from '@/components/sectionTitle'
+import { useEffect, useState } from 'react'
+import { AnimatedBackground } from '@/components/ui/animated-background'
+import Link from 'next/link'
+import { getAllBlogs } from '@/services/blog'
 
 export default function BlogSection() {
   const [articles, setArticles] = useState<any[]>([])

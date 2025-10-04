@@ -1,11 +1,11 @@
-import SectionTitle from "@/components/sectionTitle";
-import { Spotlight } from "@/components/ui/spotlight";
-import { WORK_EXPERIENCE } from "../data";
-import Link from "next/link";
-import { workExperience } from "@/data/workData";
+import SectionTitle from '@/components/sectionTitle'
+import { Spotlight } from '@/components/ui/spotlight'
+import { WORK_EXPERIENCE } from '../data'
+import Link from 'next/link'
+import { workExperience } from '@/data/workData'
 
 export default function CareerSection() {
-  const isComingSoon = workExperience.length === 0;
+  const isComingSoon = workExperience.length === 0
   return (
     <section>
       <SectionTitle title="Career Journey" comingSoon={isComingSoon} />
@@ -23,10 +23,10 @@ export default function CareerSection() {
             <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
               <div className="relative flex w-full flex-row justify-between">
                 <div>
-                  <h4 className="font-normal dark:text-white md:text-lg">
+                  <h4 className="font-normal md:text-lg dark:text-white">
                     {job.title}
                   </h4>
-                  <p className="text-zinc-500 dark:text-zinc-400 text-sm md:text-base">
+                  <p className="text-sm text-zinc-500 md:text-base dark:text-zinc-400">
                     {job.company} | {job.location}
                   </p>
                 </div>
