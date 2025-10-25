@@ -67,7 +67,7 @@ export default function ProjectSection() {
   return (
     <section>
       <SectionTitle title="My Works" comingSoon={isComingSoon} />
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
         {PROJECTS.map((project) => (
           <div key={project.name} className="space-y-2">
             <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
